@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+exec &> /dev/null
+for ((;;)); do
+(cd ~/git-rep && flock -n ~/packages/.gitsvn_fetch_lock ~/packages/fetch) &> ~/packages/.gitsvn_fetch_log
+sleep 60;
+done;
