@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [[ $# < 1 ]]; then
+	echo "usage: $0 target(searcher27-vm3)"
+	exit 1;
+fi
+~/packages/deploy git-rep/bin/searcherd $1

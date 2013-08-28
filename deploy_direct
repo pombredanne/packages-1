@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+if [[ $# < 2 ]]; then
+	echo "usage: $0 source(git-rep/pack/people-search.tgz) target(aurora15, spider9)"
+	exit 1
+fi
+SOURCE=$1
+TARGET=$2
+NAME=$(basename $SOURCE)
+scp d:~/$SOURCE ~/tmp
+scp ~/tmp/$NAME $TARGET:~/

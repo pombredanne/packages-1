@@ -1,0 +1,3 @@
+scp d:~/git-rep/pack/people-search.tgz ~/tmp
+scp ~/tmp/people-search.tgz devhdp:~/
+rm ~/tmp/people-search.tgz

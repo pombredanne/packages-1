@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [[ $# < 1 ]]; then
+	echo "usage: $0 target(aurora15,spider9)"
+	exit 1;
+fi
+./deploy git-rep/pack/people-search.tgz $1

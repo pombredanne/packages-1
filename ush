@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+git remote show origin | grep "$BRANCH_NAME\s\+tracked" &> /dev/null
+if [ $? -ne 0 ]; then
+    git push -u origin $BRANCH_NAME || (echo "Shit!"; exit 1)
+fi
+git push && ssh d "cd git-rep; if git rev-parse --abbrev-ref HEAD | fgrep $BRANCH_NAME; then git reset --hard HEAD;fi"
