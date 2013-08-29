@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-rsync -avzr --exclude="*.class" --exclude="*.o" --exclude "*.cpp" --exclude="*.cmake" --exclude="*.make" d:git-rep/tmp/ ~/workspace/git-rep/tmp/
-rsync -avzr d:git-rep/.classpath ~/workspace/git-rep/.classpath
-rsync -avzr --cvs-exclude --exclude="*.class" d:git-rep/projects/protogen/java/src.gen/ ~/workspace/git-rep/projects/protogen/java/src.gen/
+rsync -avzr --exclude="*.class" --exclude="*.o" --exclude "*.cpp" --exclude="*.cmake" --exclude="*.make" d:git-rep/tmp/ ~/git-rep/tmp/
+rsync -avzr d:git-rep/.classpath ~/git-rep/.classpath
+rsync -avzr --cvs-exclude --exclude="*.class" d:git-rep/projects/protogen/java/src.gen/ ~/git-rep/projects/protogen/java/src.gen/

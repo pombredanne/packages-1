@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?p2f version='1.0.0'?>
+<p2f version='1.0.0'>
+  <ius size='7'>
+    <iu id='com.github.eclipsecolortheme.feature.feature.group' name='Eclipse Color Theme' version='0.12.0.201207240713'>
+      <repositories size='1'>
+        <repository location='http://eclipse-color-theme.github.com/update/'/>
+      </repositories>
+    </iu>
+    <iu id='tsoiyatshing.fileencodinginfo.feature.feature.group' name='File Encoding Info' version='1.1.2.201004212251'>
+      <repositories size='1'>
+        <repository location='http://eclipse-fileencodinginfo.googlecode.com/svn/trunk/update/'/>
+      </repositories>
+    </iu>
+    <iu id='net.sourceforge.vrapper.feature.group' name='Vrapper' version='0.34.1'>
+      <repositories size='1'>
+        <repository location='http://vrapper.sourceforge.net/update-site/stable/'/>
+      </repositories>
+    </iu>
+    <iu id='net.sourceforge.vrapper.plugin.ipmotion.feature.group' name='Vrapper - ipmotion.vim Plugin (Optional)' version='0.34.1'>
+      <repositories size='1'>
+        <repository location='http://vrapper.sourceforge.net/update-site/stable/'/>
+      </repositories>
+    </iu>
+    <iu id='net.sourceforge.vrapper.eclipse.jdt.feature.feature.group' name='Vrapper - Java Extensions (Optional, requires JDT)' version='0.34.1'>
+      <repositories size='1'>
+        <repository location='http://vrapper.sourceforge.net/update-site/stable/'/>
+      </repositories>
+    </iu>
+    <iu id='net.sourceforge.vrapper.plugin.splitEditor.feature.group' name='Vrapper - Split Editor Plugin (Optional, requires Eclipse 4+)' version='0.34.1'>
+      <repositories size='1'>
+        <repository location='http://vrapper.sourceforge.net/update-site/stable/'/>
+      </repositories>
+    </iu>
+    <iu id='com.google.eclipse.mechanic.feature.group' name='Workspace Mechanic' version='0.3.4'>
+      <repositories size='1'>
+        <repository location='http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/'/>
+      </repositories>
+    </iu>
+  </ius>
+</p2f>

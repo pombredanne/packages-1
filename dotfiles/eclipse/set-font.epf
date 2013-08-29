@@ -1,0 +1,7 @@
+# @title Font
+# @description Font
+# @task_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Thu Aug 29 16:31:49 MSK 2013
+/instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont=1|Monaco|13.0|0|COCOA|1|Monaco;

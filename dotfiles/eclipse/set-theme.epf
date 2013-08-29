@@ -1,0 +1,8 @@
+# @title Theme
+# @description Theme
+# @task_type LASTMOD
+#
+# Created by the Workspace Mechanic Preference Recorder
+#Thu Aug 29 16:28:42 MSK 2013
+file_export_version=3.0
+/instance/org.eclipse.e4.ui.css.swt.theme/themeid=com.github.eclipsecolortheme.themes.darkjuno
