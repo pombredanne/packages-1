@@ -25,6 +25,9 @@ source ~/packages/git-prompt.sh
 #export PS1="\h:\W \u\$(__git_ps1 \" (%s)\")\$ "
 export PS1="[\u@\h \W]\$(__git_ps1 \" (%s)\")\$ "
 
+# Completions for auto_pack for gogo projects
+source ~/packages/auto_pack-completion.sh
+
 #export PROMPT_COMMAND='hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; if [[ ${hpwd%% *} == "cd" ]]; then cwd=$OLDPWD; else cwd=$PWD; fi; hpwd="${hpwd% ### *} ### $cwd"; history -s "$hpwd"'
 
 set -o vi
