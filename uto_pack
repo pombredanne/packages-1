@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+usage()
+{
+    cat - <<END
+Usage: $0 [-o output archive filename] [-j make threads] target1 [ target2 ... ]
+calls install_target* -j16, copy binaries and jars to auto_pack dir
+Default: create auto_pack/pack.tgz
+-o option given: create auto_pack/[filename].tgz
+END
+    exit 1
+}
+
+OUT=pack.tgz
+THREADS=16
+DIR=auto_pack
+BIN_TMP=__bin_temporary_dir
+
+while getopts o:j: opt; do
+    case $opt in
+        o) OUT="$OPTARG.tgz" ;;
+        j) THREADS=$OPTARG ;;    
+        *) usage ;;
+    esac
+done
+shift $(( OPTIND-1 ))
+
+if [[ $# == 0 ]]; then
+    usage
+fi
+
+    
+# save old bin dir
+rm -rf $BIN_TMP
+mv bin $BIN_TMP
+mkdir bin
+
+echo $OUT
+echo $THREADS
+echo $@
+
+# build
+TARGETS=$@
+for t in $TARGETS; do
+    make -j$THREADS install_$t
+done
+
+# make package
+rm -Rf $DIR
+mkdir $DIR
+
+for t in $TARGETS; do
+    if [ -f bin/$t ]; then
+        cp bin/$t $DIR/
+    fi
+done
+cp bin/*.so $DIR/
+cp bin/*.jar $DIR/
+
+# generate job_env.sh
+jars=$(cat tmp/.jarlist | tr '\n' ':' | sed 's/:$//')
+deps=$(cd bin; ls -1 *.jar | tr '\n' ':' | sed 's/:$//')
+echo "export JOB_CLASSPATH='$jars'" >> $DIR/job_env.sh
+echo "export JAR_DEPS='$deps'" >> $DIR/job_env.sh
+chmod a+x $DIR/job_env.sh
+
+cd $DIR; tar czf $OUT *; cd -
+
+#restore bin
+rm -rf bin
+mv $BIN_TMP bin
