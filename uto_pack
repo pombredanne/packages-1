@@ -34,9 +34,7 @@ rm -rf $BIN_TMP
 mv bin $BIN_TMP
 mkdir bin
 
-echo $OUT
-echo $THREADS
-echo $@
+echo "Building to $DIR/$OUT using -j$THREADS [$@]"
 
 # build
 TARGETS=$@
