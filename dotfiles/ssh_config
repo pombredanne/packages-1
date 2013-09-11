@@ -1,0 +1,153 @@
+ControlMaster auto
+ControlPath   /Users/oleg/.ssh/tmp/%h_%p_%r
+Host part
+	ProxyCommand ssh o.ryabukhin@point.corp.mail.ru nc part 20062
+	User o.ryabukhin
+Host searcher26
+	ProxyCommand ssh o.ryabukhin@part nc %h 22
+	User o.ryabukhin
+Host searcher25
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host devhdp
+	ProxyCommand ssh o.ryabukhin@part nc devhdp1.p 22
+	User o.ryabukhin
+Host hdp
+	ProxyCommand ssh o.ryabukhin@part nc hdp0.p 22
+	User o.ryabukhin
+Host manul
+	ProxyCommand ssh o.ryabukhin@part nc manul 22
+	User o.ryabukhin
+#Host d 
+	#HostName o.ryabukhin.s
+	#User o.ryabukhin
+Host d 
+	HostName 10.246.25.1
+	User o.ryabukhin
+Host fetisher3
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22 
+	User o.ryabukhin
+Host fetisher4
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22 
+	User o.ryabukhin
+Host fetisher5
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22 
+	User o.ryabukhin
+Host rabbit
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22 
+	User o.ryabukhin
+
+##################
+# generated from /etc/clusters (csshX)
+##################
+# phalanx_prod
+Host  muztak.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  atakora.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jugdyr.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  babatag.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  tupungato.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  koropuna.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  arakar.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  karatau.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  sayany.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  sahama.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  kazbek.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  aktau.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  manaraga.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  yalangas.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  kurkak.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  yurma.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+# srch_img_prod
+Host  bosch.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  vangogh.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  gogen.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  shishkin.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  levitan.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  rafael.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  glazunov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  serov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  perov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  picasso.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  dali.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  surikov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  repin.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  rubens.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  vasnetsov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+# srch_img_test
+Host  tiziano.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  vrubel.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  leonardo.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  rublev.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  deineka.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
