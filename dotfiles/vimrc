@@ -1,4 +1,6 @@
 execute pathogen#infect()
+execute pathogen#helptags()
+
 
 set t_ku=OA
 set t_kd=OB
@@ -20,6 +22,14 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 syntax on
+set hidden
+set backspace=2 " make backspace work like most other apps
+set backspace=indent,eol,start
+
+" Google protocol buffers
+autocmd Bufread,BufNewFile *.proto set filetype=javascript
+" Python: Better indentation
+autocmd BufNewFile,BufRead *.py setlocal nosmartindent
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -32,7 +42,9 @@ let mapleader = ","
 """ PLUGINS
 "
 "
-nmap <C-p> :CtrlPMixed<CR>
+nmap <leader>p :CtrlP<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>t :CtrlPTag<CR>
 nmap <C-o> :NERDTreeTabsToggle<CR>
 map <leader>w :NERDTreeFind<cr>
 
@@ -57,6 +69,8 @@ autocmd FileType python setlocal completeopt-=preview
 " Settings for powerline
 set laststatus=2   " Always show the statusline
 " Settings for ctrlp
+let g:ctrlp_user_command = "find %s -type f | egrep '\.(c|h|cpp|hpp|java|proto|py|sh|pl)$'"
+let g:ctrlp_by_filename = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc

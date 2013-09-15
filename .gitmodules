@@ -31,3 +31,9 @@
 [submodule "dotfiles/vim/bundle/vim-session"]
 	path = dotfiles/vim/bundle/vim-session
 	url = https://github.com/xolox/vim-session
+[submodule "dotfiles/vim/bundle/vim-unimpaired"]
+	path = dotfiles/vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "dotfiles/vim/bundle/nerdcommenter"]
+	path = dotfiles/vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
