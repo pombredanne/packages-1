@@ -1,0 +1,33 @@
+[submodule "dotfiles/vim/bundle/ropevim"]
+	path = dotfiles/vim/bundle/ropevim
+	url = https://github.com/sontek/rope-vim.git
+[submodule "dotfiles/vim/bundle/nerdtree"]
+	path = dotfiles/vim/bundle/nerdtree
+	url = https://github.com/vim-scripts/The-NERD-tree
+[submodule "dotfiles/vim/bundle/ctrlp"]
+	path = dotfiles/vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
+[submodule "dotfiles/vim/bundle/nerdtree-tabs"]
+	path = dotfiles/vim/bundle/nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "dotfiles/vim/bundle/vim-powerline"]
+	path = dotfiles/vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline
+[submodule "dotfiles/vim/bundle/ctrlp-funky"]
+	path = dotfiles/vim/bundle/ctrlp-funky
+	url = git://github.com/tacahiroy/ctrlp-funky.git
+[submodule "dotfiles/vim/bundle/vim-fugitive"]
+	path = dotfiles/vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "dotfiles/vim/bundle/solarized"]
+	path = dotfiles/vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "dotfiles/vim/bundle/jedi-vim"]
+	path = dotfiles/vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
+[submodule "dotfiles/vim/bundle/vim-misc"]
+	path = dotfiles/vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule "dotfiles/vim/bundle/vim-session"]
+	path = dotfiles/vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session
