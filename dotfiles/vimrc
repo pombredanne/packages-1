@@ -42,6 +42,7 @@ let mapleader = ","
 """ PLUGINS
 "
 "
+"
 nmap <leader>p :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>t :CtrlPTag<CR>
@@ -87,6 +88,13 @@ nnoremap <Leader>fu :CtrlPFunky<Cr>
 """ MISC
 "
 "
+
+" Uncomment the following to have Vim jump to the last position when
+" " reopening a file
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 " easier moving between tabs
 map <Leader>n <esc>:tabprevious<CR>
