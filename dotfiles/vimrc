@@ -48,6 +48,7 @@ nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>t :CtrlPTag<CR>
 nmap <C-o> :NERDTreeTabsToggle<CR>
 map <leader>w :NERDTreeFind<cr>
+map <leader>e :BufExplorer<cr>
 
 " https://github.com/xolox/vim-session
 :let g:session_autosave = 'no'
