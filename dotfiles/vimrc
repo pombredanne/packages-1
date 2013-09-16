@@ -101,6 +101,9 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+" change working directory to current opened file
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
 " easier moving between tabs
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
