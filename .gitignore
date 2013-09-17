@@ -1,2 +1,4 @@
 .gitsvn_fetch_lock
 .gitsvn_fetch_log
+dotfiles/vim/eclim/
+dotfiles/vim/plugin/eclim.vim
