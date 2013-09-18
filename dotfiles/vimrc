@@ -14,7 +14,7 @@ let mapleader = ","
 nmap <leader>p :CtrlP<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>t :CtrlPTag<CR>
-nmap <C-o> :NERDTreeTabsToggle<CR>
+nmap <leader>o :NERDTreeTabsToggle<CR>
 map <leader>w :NERDTreeFind<cr>
 map <leader>e :BufExplorer<cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
