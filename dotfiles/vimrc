@@ -85,6 +85,8 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
+map <silent> <C-d> <esc>:bd<CR>
+
 " Bind nohl
 " " Removes highlight of your last search
 noremap <C-n> :nohl<CR>
