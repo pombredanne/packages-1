@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 csshx_config = "/etc/clusters"
 clusters = open(csshx_config).readlines()
 for cluster in clusters:

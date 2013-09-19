@@ -117,9 +117,6 @@ Host  serov.p
 Host  perov.p
 	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
 	User o.ryabukhin
-Host  picasso.p
-	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
-	User o.ryabukhin
 Host  dali.p
 	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
 	User o.ryabukhin
@@ -133,6 +130,36 @@ Host  rubens.p
 	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
 	User o.ryabukhin
 Host  vasnetsov.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg1.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg2.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg3.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg4.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg5.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg6.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg7.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg8.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg9.p
+	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
+	User o.ryabukhin
+Host  jpeg10.p
 	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22
 	User o.ryabukhin
 # srch_img_test
