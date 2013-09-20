@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import re
+import os
+
+eclipseConf = os.path.expanduser("~/packages/dotfiles/eclipse/eclipse-keybindings.epf")
+
+print "ECLIPSE"
+lines = []
+for line in open(eclipseConf, "r"):
+    lines.extend(line.split("\\n"))
+
+for line in lines:
+    m = re.search(r'commandId\\="org.eclipse.([^"]+)".*?keySequence\\="([^"]+)"', line)
+    if m is None:
+        continue
+    print m.group(1).rjust(50), m.group(2)
+
+
+
+
+
+
+
