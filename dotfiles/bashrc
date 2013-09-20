@@ -19,13 +19,16 @@ export TERM="xterm-color"
 source ~/packages/acd_func.sh
 
 # Set prompt with git (show branch in prompt)
-source ~/packages/git-completion.sh
 source ~/packages/git-prompt.sh
 #export PS1="\h:\W \u\$(__git_ps1 \" (%s)\")\$ "
 export PS1="[\u@\h \W]\$(__git_ps1 \" (%s)\")\$ "
 
+# Completions for GIT
+source ~/packages/completions/git-completion.sh
 # Completions for auto_pack for gogo projects
-source ~/packages/auto_pack-completion.sh
+source ~/packages/completions/auto_pack-completion.sh
+# Completions for tmux sessions in tma, tmk (tmux attach, tmux kill, see below)
+source ~/packages/completions/tmux-completion.sh
 
 #export PROMPT_COMMAND='hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; if [[ ${hpwd%% *} == "cd" ]]; then cwd=$OLDPWD; else cwd=$PWD; fi; hpwd="${hpwd% ### *} ### $cwd"; history -s "$hpwd"'
 
