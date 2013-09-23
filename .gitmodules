@@ -37,3 +37,9 @@
 [submodule "dotfiles/vim/bundle/nerdcommenter"]
 	path = dotfiles/vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "dotfiles/vim/bundle/gundo"]
+	path = dotfiles/vim/bundle/gundo
+	url = https://github.com/sjl/gundo.vim
+[submodule "dotfiles/vim/bundle/easymotion"]
+	path = dotfiles/vim/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion

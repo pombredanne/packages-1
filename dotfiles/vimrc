@@ -18,6 +18,7 @@ nmap <leader>o :NERDTreeTabsToggle<CR>
 map <leader>w :NERDTreeFind<cr>
 map <leader>e :BufExplorer<cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
+nnoremap <Leader>gu :GundoToggle<CR>
 
 " Eclim
 let g:EclimProjectRefreshFiles = 0
@@ -107,6 +108,12 @@ set t_ku=OA
 set t_kd=OB
 set t_kr=OC
 set t_kl=OD
+
+"That means that on first <Tab> it will complete to the longest common string and will invoke wildmenu (an horizontal and unobstructive little menu). On next <Tab> it will complete the first altenative and the will start to cycle through the rest. You can go back and forth with <Tab> and <S-Tab> respectively.
+"An awesome example on how wildmenu is very useful is to complete buffers, use the conf I posted and then try:
+":b<Tab>
+set wildmenu
+set wildmode=longest:full,full
 
 "Vim is a little surly, beeping at you at every chance. You can either find a
 "way to turn off the bell completely, or more usefully, make the bell visual: 
