@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+if [[ $# < 1 ]]; then
+    echo "usage: $0 what [where] [dir]"
+    exit 1
+fi
+
+WHERE=""
+if [[ $# > 1 ]]; then
+    WHERE="-iname "$2""
+fi
+
+DIR="."
+if [[ $# > 2 ]]; then
+    DIR=$3
+fi
+
+files=$(find $DIR -type f $WHERE | tr '\n' ' ') 
+grep $1 $files
