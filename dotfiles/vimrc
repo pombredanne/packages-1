@@ -44,7 +44,7 @@ autocmd FileType python setlocal completeopt-=preview
 " Settings for powerline
 set laststatus=2   " Always show the statusline
 " Settings for ctrlp
-let g:ctrlp_user_command = "find %s -type f | egrep '\.(c|h|cpp|hpp|java|proto|py|sh|pl|txt)$'"
+let g:ctrlp_user_command = "find %s -type f | egrep '\.(c|h|cpp|hpp|java|proto|py|sh|pl|txt|conf)$'"
 let g:ctrlp_by_filename = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_height = 30
