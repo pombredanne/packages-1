@@ -6,7 +6,7 @@ fi
 
 WHERE=""
 if [[ $# > 1 ]]; then
-    WHERE="-iname "$2""
+    WHERE="-iname \"*$2*\""
 fi
 
 DIR="."
