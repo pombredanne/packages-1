@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-python scripts/pom.py .classpath
+python ~/packages/scripts/pom.py .classpath
 mvn clean
 MAVEN_OPTS="-Xmx1G" mvn compile
 mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true 
