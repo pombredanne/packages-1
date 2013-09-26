@@ -9,6 +9,7 @@ export PATH=$PATH:~/packages
 
 # Tell ls to be colourful
 eval `dircolors ~/packages/dotfiles/dircolors.256dark`
+alias ls='ls --color=auto'
 export CLICOLOR=1
 
 # Tell grep to highlight matches

@@ -2,5 +2,5 @@ export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:/us
 export EDITOR=vim #for tmuxinator
 source /usr/local/Cellar/tmux/1.8/etc/bash_completion.d/tmux
 alias dircolors='gdircolors'
-alias ls='gls --color=auto'
 source ~/.bashrc
+alias ls='gls --color=auto'
