@@ -1,0 +1,6 @@
+export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:/usr/local/opt/ruby/bin/
+export EDITOR=vim #for tmuxinator
+source ~/.bashrc
+source /usr/local/Cellar/tmux/1.8/etc/bash_completion.d/tmux
+alias dircolors='gdircolors'
+alias ls='gls --color=auto'
