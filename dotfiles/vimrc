@@ -105,10 +105,10 @@ set listchars=tab:>-,trail:·,eol:$
 "
 " Global
 "
-set t_ku=OA
-set t_kd=OB
-set t_kr=OC
-set t_kl=OD
+"set t_ku=OA
+"set t_kd=OB
+"set t_kr=OC
+"set t_kl=OD
 
 "That means that on first <Tab> it will complete to the longest common string and will invoke wildmenu (an horizontal and unobstructive little menu). On next <Tab> it will complete the first altenative and the will start to cycle through the rest. You can go back and forth with <Tab> and <S-Tab> respectively.
 "An awesome example on how wildmenu is very useful is to complete buffers, use the conf I posted and then try:
