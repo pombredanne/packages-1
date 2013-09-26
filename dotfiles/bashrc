@@ -13,7 +13,6 @@ export CLICOLOR=1
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
-export TERM="xterm-color"
 
 # History of visited directories in bash
 source ~/packages/acd_func.sh
