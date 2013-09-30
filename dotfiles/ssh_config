@@ -22,7 +22,7 @@ Host manul
 	#HostName o.ryabukhin.s
 	#User o.ryabukhin
 Host d 
-	HostName 10.246.25.1
+	HostName 10.246.45.1
 	User o.ryabukhin
 Host fetisher3
 	ProxyCommand ssh o.ryabukhin@searcher26 nc %h 22 
