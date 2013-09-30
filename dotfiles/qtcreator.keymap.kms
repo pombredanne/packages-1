@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE KeyboardMappingScheme>
-<!-- Written by Qt Creator 2.8.0, 2013-07-11T18:42:19. -->
+<!-- Written by Qt Creator 2.8.1, 2013-09-30T19:35:25. -->
 <mapping>
- <shortcut id="Mercurial.Action.StatusMulti"/>
  <shortcut id="Mercurial.Action.Pull"/>
  <shortcut id="Mercurial.Action.Push"/>
  <shortcut id="Mercurial.Action.Update"/>
@@ -136,11 +135,9 @@
  <shortcut id="ImageViewer.FitToScreen">
   <key value="Ctrl+="/>
  </shortcut>
- <shortcut id="ImageViewer.Background">
-  <key value="Ctrl+["/>
- </shortcut>
+ <shortcut id="ImageViewer.Background"/>
  <shortcut id="ImageViewer.Outline">
-  <key value="Ctrl+]"/>
+  <key value="Ctrl+Shift+O"/>
  </shortcut>
  <shortcut id="ImageViewer.ToggleAnimation"/>
  <shortcut id="Debugger.Debugger.Docks.Modules"/>
@@ -329,17 +326,17 @@
  <shortcut id="FormEditor.PropertyEditor"/>
  <shortcut id="FormEditor.SignalsAndSlotsEditor"/>
  <shortcut id="FormEditor.ActionEditor"/>
- <shortcut id="FormEditor.Locked"/>
- <shortcut id="FormEditor.ResetToDefaultLayout"/>
  <shortcut id="QtCreator.ReturnToEditor">
   <key value="Esc"/>
  </shortcut>
+ <shortcut id="FormEditor.Locked"/>
  <shortcut id="QtCreator.New">
   <key value="Ctrl+N"/>
  </shortcut>
  <shortcut id="QtCreator.Open">
   <key value="Ctrl+O"/>
  </shortcut>
+ <shortcut id="FormEditor.ResetToDefaultLayout"/>
  <shortcut id="QtCreator.OpenWith"/>
  <shortcut id="QtCreator.Save">
   <key value="Ctrl+S"/>
@@ -399,14 +396,14 @@
   <key value="Ctrl+Shift+W"/>
  </shortcut>
  <shortcut id="QtCreator.CloseOthers"/>
- <shortcut id="QtCreator.GotoPreviousInHistory">
-  <key value="Alt+Tab"/>
+ <shortcut id="QtCreator.GotoPreviousInHistory"/>
+ <shortcut id="QtCreator.GotoNextInHistory"/>
+ <shortcut id="QtCreator.GoBack">
+  <key value="Ctrl+["/>
  </shortcut>
- <shortcut id="QtCreator.GotoNextInHistory">
-  <key value="Alt+Shift+Tab"/>
+ <shortcut id="QtCreator.GoForward">
+  <key value="Ctrl+]"/>
  </shortcut>
- <shortcut id="QtCreator.GoBack"/>
- <shortcut id="QtCreator.GoForward"/>
  <shortcut id="QtCreator.Split">
   <key value="Meta+E, 2"/>
  </shortcut>
@@ -417,13 +414,13 @@
   <key value="Meta+E, 4"/>
  </shortcut>
  <shortcut id="QtCreator.RemoveCurrentSplit">
-  <key value="Meta+E, 0"/>
+  <key value="Meta+D"/>
  </shortcut>
  <shortcut id="QtCreator.RemoveAllSplits">
   <key value="Meta+E, 1"/>
  </shortcut>
  <shortcut id="QtCreator.GotoOtherSplit">
-  <key value="Meta+E, O"/>
+  <key value="Meta+L"/>
  </shortcut>
  <shortcut id="Tools.External.lupdate"/>
  <shortcut id="Tools.External.lrelease"/>
@@ -523,12 +520,8 @@
  <shortcut id="TextEditor.ResetFontSize">
   <key value="Meta+0"/>
  </shortcut>
- <shortcut id="TextEditor.GotoBlockStart">
-  <key value="Ctrl+["/>
- </shortcut>
- <shortcut id="TextEditor.GotoBlockEnd">
-  <key value="Ctrl+]"/>
- </shortcut>
+ <shortcut id="TextEditor.GotoBlockStart"/>
+ <shortcut id="TextEditor.GotoBlockEnd"/>
  <shortcut id="TextEditor.GotoBlockStartWithSelection">
   <key value="Ctrl+{"/>
  </shortcut>
@@ -576,7 +569,7 @@
   <key value="Ctrl+E"/>
  </shortcut>
  <shortcut id="TextEditor.FollowSymbolUnderCursorInNextSplit">
-  <key value="Meta+E, F2"/>
+  <key value="Ctrl+Shift+E"/>
  </shortcut>
  <shortcut id="TextEditor.JumpToFileUnderCursor">
   <key value="F2"/>
@@ -885,12 +878,8 @@
  <shortcut id="Gerrit.OpenView"/>
  <shortcut id="Gerrit.Push"/>
  <shortcut id="Help.Home"/>
- <shortcut id="Help.Previous">
-  <key value="Ctrl+["/>
- </shortcut>
- <shortcut id="Help.Next">
-  <key value="Ctrl+]"/>
- </shortcut>
+ <shortcut id="Help.Previous"/>
+ <shortcut id="Help.Next"/>
  <shortcut id="Help.AddBookmark">
   <key value="Meta+M"/>
  </shortcut>
@@ -930,4 +919,5 @@
  <shortcut id="Mercurial.Action.DiffMulti"/>
  <shortcut id="Mercurial.Action.Logmulti"/>
  <shortcut id="Mercurial.Action.RevertMulti"/>
+ <shortcut id="Mercurial.Action.StatusMulti"/>
 </mapping>
