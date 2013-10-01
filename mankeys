@@ -1,22 +1,61 @@
 #!/usr/bin/env python
 import re
 import os
+import sys
 
-eclipseConf = os.path.expanduser("~/packages/dotfiles/eclipse/eclipse-keybindings.epf")
+def qt():
+    pats = ("Editor", "QtCreator", "Cpp")
+    qtConf = os.path.expanduser("~/packages/dotfiles/qtcreator.keymap.kms")
+    lines = open(qtConf).readlines()
 
-print "ECLIPSE"
-lines = []
-for line in open(eclipseConf, "r"):
-    lines.extend(line.split("\\n"))
+    qtMap = {}
+    for i in xrange(0, len(lines)):
+        line = lines[i]
+        m = re.search(r'value="([^"]+)"', line)
+        if m is None:
+            continue
+        key = m.group(1)
+        m = re.search(r'id="([^"]+)"', lines[i-1])
+        if m is None:
+            continue
+        command = m.group(1) 
+        if key not in qtMap.keys():
+            qtMap[key] = []
+        qtMap[key].append(command)
 
-for line in lines:
-    m = re.search(r'commandId\\="org.eclipse.([^"]+)".*?keySequence\\="([^"]+)"', line)
-    if m is None:
-        continue
-    print m.group(1).rjust(50), m.group(2)
+        #conflicts
+    for k, v in qtMap.items():
+        if len(v) > 1 and k != "Del":
+            print "conflict", k, v
 
+    for k, v in qtMap.items():
+        val = v[0]
+        matched = [ p for p in pats if val.find(p) >=0 ]
+        if len(matched) > 0:
+            print k, val
 
+def eclipse():
+    eclipseConf = os.path.expanduser("~/packages/dotfiles/eclipse/eclipse-keybindings.epf")
 
+    print "ECLIPSE"
+    lines = []
+    for line in open(eclipseConf, "r"):
+        lines.extend(line.split("\\n"))
+
+    for line in lines:
+        m = re.search(r'commandId\\="org.eclipse.([^"]+)".*?keySequence\\="([^"]+)"', line)
+        if m is None:
+            continue
+        print m.group(1).rjust(50), m.group(2)
+
+if len(sys.argv) < 2:
+    print "usage:", sys.argv[0], "<app>"
+    sys.exit(1)
+type = sys.argv[1]
+if type == "qt":
+    qt()
+elif type == "eclipse":
+    eclipse()
 
 
 
