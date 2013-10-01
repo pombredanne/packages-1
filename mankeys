@@ -32,7 +32,7 @@ def qt():
         val = v[0]
         matched = [ p for p in pats if val.find(p) >=0 ]
         if len(matched) > 0:
-            print k, val
+            print k.rjust(50) + "\t" +  val
 
 def eclipse():
     eclipseConf = os.path.expanduser("~/packages/dotfiles/eclipse/eclipse-keybindings.epf")
@@ -46,7 +46,7 @@ def eclipse():
         m = re.search(r'commandId\\="org.eclipse.([^"]+)".*?keySequence\\="([^"]+)"', line)
         if m is None:
             continue
-        print m.group(1).rjust(50), m.group(2)
+        print m.group(1).rjust(50) + "\t" +  m.group(2)
 
 if len(sys.argv) < 2:
     print "usage:", sys.argv[0], "<app>"
