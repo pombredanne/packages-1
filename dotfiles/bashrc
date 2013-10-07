@@ -4,6 +4,10 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+# Source host-specific definitions
+if [ -f ~/.bashrc_extra ]; then
+    . ~/.bashrc_extra
+fi
 
 export PATH=$PATH:~/packages
 

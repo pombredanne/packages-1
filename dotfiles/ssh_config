@@ -3,6 +3,9 @@ ControlPath   /Users/oleg/.ssh/tmp/%h_%p_%r
 Host part
 	ProxyCommand ssh o.ryabukhin@point.corp.mail.ru nc part 20062
 	User o.ryabukhin
+Host devops
+	ProxyCommand ssh o.ryabukhin@part nc devops2.p.mail.ru 22
+	User o.ryabukhin
 Host searcher26
 	ProxyCommand ssh o.ryabukhin@part nc %h 22
 	User o.ryabukhin
