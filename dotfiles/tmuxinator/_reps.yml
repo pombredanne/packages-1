@@ -1,0 +1,26 @@
+# ~/.tmuxinator/_reps.yml
+
+name: _reps
+root: ~/git-rep
+
+# Optional tmux socket
+#socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - git-rep(dev/local):
+      layout: main-vertical
+      panes:
+          - ssh -t d "cd git-rep; bash --login"
+          - 
+  - dev: ssh dev
+  - background: for ((;;)); do caffeinate -u -t 60; done
+

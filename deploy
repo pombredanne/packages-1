@@ -7,6 +7,5 @@ SOURCE=$1
 TARGET=$2
 NAME=$(basename $SOURCE)
 scp d:~/$SOURCE ~/tmp
-scp ~/tmp/$NAME searcher26:~/
-#scp pack/people-search.tgz searcher26:~/
-ssh -n searcher26 "mv $NAME /tmp;sudo -u poisk scp /tmp/$NAME $TARGET:~/; rm /tmp/$NAME"
+scp ~/tmp/$NAME dev:~/
+ssh -n dev "mv $NAME /tmp;sudo -u poisk scp /tmp/$NAME $TARGET:~/; rm /tmp/$NAME"
