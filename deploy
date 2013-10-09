@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+DEV_TRANSIT="/mnt/disk1/o.ryabukhin/transit"
 if [[ $# < 2 ]]; then
 	echo "usage: $0 source(git-rep/pack/people-search.tgz) target(aurora15, spider9)"
 	exit 1
@@ -6,6 +7,9 @@ fi
 SOURCE=$1
 TARGET=$2
 NAME=$(basename $SOURCE)
-scp d:~/$SOURCE ~/tmp
-scp ~/tmp/$NAME dev:~/
-ssh -n dev "mv $NAME /tmp;sudo -u poisk scp /tmp/$NAME $TARGET:~/; rm /tmp/$NAME"
+
+TMP=$(mktemp -d -t tmp)
+scp d:~/$SOURCE $TMP/ && scp $TMP/$NAME dev:$DEV_TRANSIT
+rm -r $TMP
+
+ssh -n dev "sudo -u poisk scp $DEV_TRANSIT/$NAME $TARGET:~/; rm $DEV_TRANSIT/$NAME"
