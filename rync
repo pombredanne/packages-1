@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
+function sync {
+    src=$1
+    dst=$2
+    opts='-avzr --cvs-exclude --exclude="*.class"'
+    echo "Sync from $src to $dst"
+    rsync $opts $src $dst 1>/dev/null
+}
+
 ssh d "cd git-rep && make -j16 install_protogen-go.mail.ru && make -j16 install_common-go.mail.ru && make -j16 install_stat-go.mail.ru"
 
-#rsync -avzr --exclude="*.class" --exclude="*.o" --exclude "*.cpp" --exclude="*.cmake" --exclude="*.make" d:git-rep/tmp/ ~/git-rep/tmp/
-rsync -avzr d:git-rep/.classpath ~/git-rep/.classpath
-rsync -avzr --cvs-exclude d:git-rep/tmp/contrib/ ~/git-rep/tmp/contrib/
-rsync -avzr --cvs-exclude d:git-rep/projects/protogen/python/src.gen/ ~/git-rep/projects/protogen/python/src.gen/
-rsync -avzr --cvs-exclude --exclude="*.class" d:git-rep/projects/protogen/java/src.gen/ ~/git-rep/projects/protogen/java/src.gen/
-rsync -avzr --cvs-exclude --exclude="*.class" d:git-rep/projects/java/stat/src.gen/ ~/git-rep/projects/java/stat/src.gen/ 
+FROM="d:git-rep"
+TO=~/git-rep
 
-rsync -avzr d:git-rep/projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java ~/git-rep/projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java
+cd $TO
+
+sync $FROM/tmp/contrib/ ./tmp/contrib/
+sync $FROM/projects/protogen/python/src.gen/ ./projects/protogen/python/src.gen/
+sync $FROM/projects/protogen/java/src.gen/ ./projects/protogen/java/src.gen/
+sync $FROM/projects/java/stat/src.gen/ ./projects/java/stat/src.gen/ 
+
+sync $FROM/projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java ./projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java
+sync $FROM/.classpath ./.classpath
+
+sed -i '/contrib\/hadoop-0.20.2-cdh3u4m20\/lib\/commons-lang-2.4.jar/d' .classpath
+
+cd -
