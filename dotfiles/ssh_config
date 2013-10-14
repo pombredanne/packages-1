@@ -1,5 +1,8 @@
 ControlMaster auto
 ControlPath   /Users/oleg/.ssh/tmp/%h_%p_%r
+Host vds
+    HostName 82.146.43.9
+    User oleg
 Host part
 	ProxyCommand ssh o.ryabukhin@point.corp.mail.ru nc part 20062
 	User o.ryabukhin
