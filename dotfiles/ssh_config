@@ -181,3 +181,6 @@ Host  rublev.p
 Host  deineka.p
 	ProxyCommand ssh o.ryabukhin@dev nc %h 22
 	User o.ryabukhin
+Host  picasso.p
+	ProxyCommand ssh o.ryabukhin@dev nc %h 22
+	User o.ryabukhin
