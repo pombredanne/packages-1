@@ -7,13 +7,22 @@ function sync {
     rsync $opts $src $dst 1>/dev/null
 }
 
-ssh d "cd git-rep && make -j16 install_protogen-go.mail.ru && make -j16 install_common-go.mail.ru && make -j16 install_stat-go.mail.ru"
+jars="protogen-go.mail.ru common-go.mail.ru stat-go.mail.ru"
+
+cmd="cd git-rep"
+for jar in $jars; do
+    cmd+=" && make -j16 install_$jar"
+done
+ssh d "$cmd"
 
 FROM="d:git-rep"
 TO=~/git-rep
 
 cd $TO
 
+for jar in $jars; do
+    sync $FROM/bin/$jar.jar ./bin/
+done
 sync $FROM/tmp/contrib/ ./tmp/contrib/
 sync $FROM/projects/protogen/python/src.gen/ ./projects/protogen/python/src.gen/
 sync $FROM/projects/protogen/java/src.gen/ ./projects/protogen/java/src.gen/

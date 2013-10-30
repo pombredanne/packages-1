@@ -17,6 +17,7 @@ root: ~/packages
 
 windows:
   - _pkgs: 
+  - minicluster: cd ~/git-rep/testsuite/bin/hbase_minicluster
   - stats_one: cd ~/Dropbox/coursera/statistics_one
   - ml: cd ~/Dropbox/coursera/ml
 
