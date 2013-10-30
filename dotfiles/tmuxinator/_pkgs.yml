@@ -18,4 +18,6 @@ root: ~/packages
 windows:
   - _pkgs: 
   - stats_one: cd ~/Dropbox/coursera/statistics_one
+  - ml: cd ~/Dropbox/coursera/ml
+
 
