@@ -2,7 +2,7 @@
 function sync {
     src=$1
     dst=$2
-    opts='-avzr --cvs-exclude --exclude="*.class"'
+    opts='-L -avzr --cvs-exclude --exclude="*.class"'
     echo "Sync from $src to $dst"
     rsync $opts $src $dst 1>/dev/null
 }
@@ -27,6 +27,7 @@ sync $FROM/tmp/contrib/ ./tmp/contrib/
 sync $FROM/projects/protogen/python/src.gen/ ./projects/protogen/python/src.gen/
 sync $FROM/projects/protogen/java/src.gen/ ./projects/protogen/java/src.gen/
 sync $FROM/projects/java/stat/src.gen/ ./projects/java/stat/src.gen/ 
+sync $FROM/include/protogen/ ./include/protogen/
 
 sync $FROM/projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java ./projects/java/common/src/ru/mail/go/webbase/utils/DomainsLists.java
 sync $FROM/.classpath ./.classpath
