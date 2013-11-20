@@ -8,3 +8,4 @@ TARGET=$2
 NAME=$(basename $SOURCE)
 scp d:~/$SOURCE ~/tmp
 scp ~/tmp/$NAME $TARGET:~/
+rm ~/tmp/$NAME
